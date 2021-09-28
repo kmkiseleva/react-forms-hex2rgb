@@ -12,7 +12,7 @@ const Converter = () => {
     let result = "rgb(..., ..., ...)";
     if (value.length === 7) {
       result = convertColor(value) || "Error!";
-    } else if (value.length > 7) {
+    } else if (value[0] !== "#" || value.length > 7) {
       result = "Error!";
     }
     setRgbOutput(result);

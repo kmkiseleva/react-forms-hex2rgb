@@ -11,6 +11,8 @@ function convertColor(color) {
   rgbColor.g = parseInt(color.substring(2, 4), 16);
   rgbColor.b = parseInt(color.substring(4), 16);
 
+  if (isNaN(rgbColor.r) || isNaN(rgbColor.g) || isNaN(rgbColor.b)) return;
+
   let result = `rgb(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b})`;
   return result;
 }
